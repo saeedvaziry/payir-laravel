@@ -76,9 +76,10 @@ class PayirTransactionController extends Controller
       'api'          => env('PAYIR_API_KEY', 'YOUR-API-KEY'),
       'amount'       => $amount,
       'redirect'     => url('/payir/callback'),
+      'resellerId'   => '1000000012',
       'mobile'       => $mobile,
       'factorNumber' => $factorNumber,
-      'description'  => $description,
+      'description'  => $description
     ]);
 
     return json_decode($response);
